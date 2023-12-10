@@ -2,7 +2,7 @@
   "name": "@lere/electron",
   "version": "1.0.0",
   "main": "main.js",
-  "author": "Fliper de Boteco",
+  "author": "fliperdeboteco",
   "license": "MIT",
   "private": false,
   "scripts": {
