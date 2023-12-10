@@ -1,0 +1,15 @@
+{
+  "name": "lere",
+  "version": "1.0.0",
+  "author": "Fliper de Boteco",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "electron": "yarn workspace @lere/electron",
+    "web": "yarn workspace @lere/web"
+  },
+  "workspaces": [
+    "electron",
+    "web"
+  ]
+}

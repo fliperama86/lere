@@ -1,0 +1,14 @@
+{
+  "name": "@lere/electron",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "Fliper de Boteco",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^28.0.0"
+  }
+}
