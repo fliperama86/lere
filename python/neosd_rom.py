@@ -1,6 +1,7 @@
 import os
 import struct
-from binascii import crc32
+
+PROM_MAX_SIZE = 0x800000 # 8MB in HEX
 
 class NeoSDRom:
   def __init__(self, file_path):
@@ -16,10 +17,16 @@ class NeoSDRom:
     for index, name in enumerate(['prom', 'srom', 'm1rom', 'vroma0', 'vroma2', 'crom0']):
       size = self.sizes[index]
       eproms[name] = self.file_content[offset:offset+size]
+
       if name == 'crom0':
         crom0 = bytearray(eproms[name])
-        crom0[1::4], crom0[2::4] = crom0[2::4], crom0[1::4] # 17027A61 for kof97
+        crom0[1::4], crom0[2::4] = crom0[2::4], crom0[1::4]
         eproms[name] = crom0
+      
+      if name == 'prom' and size > PROM_MAX_SIZE:
+        eproms[name] = self.file_content[offset:offset+PROM_MAX_SIZE]
+        eproms[name+'1'] = self.file_content[offset+PROM_MAX_SIZE:offset+size]
+      
       offset += size
     return eproms
 
