@@ -26,6 +26,8 @@ print(f"Writing to {output_dir}")
 
 for key in neofile.eproms:
   eprom_path = path.join(output_dir, key)
+  if len(neofile.eproms[key]) == 0:
+    continue
   print(f"{key}\tsize: {len(neofile.eproms[key])} \tcrc: {hex(crc32(neofile.eproms[key]))}")
   with open(eprom_path, "wb") as f:
     f.write(neofile.eproms[key])
