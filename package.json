@@ -5,8 +5,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "electron": "pnpm --filter @lere/electron",
-    "web": "pnpm --filter @lere/web"
+    "electron": "yarn workspace @lere/electron",
+    "web": "yarn workspace @lere/web"
   },
   "workspaces": [
     "electron",
