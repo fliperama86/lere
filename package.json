@@ -6,9 +6,13 @@
   "private": true,
   "scripts": {
     "electron": "yarn workspace @lere/electron",
-    "web": "yarn workspace @lere/web"
+    "web": "yarn workspace @lere/web",
+    "core": "yarn workspace @lere/core",
+    "build": "yarn core build && yarn web build",
+    "dev": "yarn core build && yarn web dev"
   },
   "workspaces": [
+    "core",
     "electron",
     "web"
   ]
