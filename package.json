@@ -6,8 +6,8 @@
   "private": true,
   "scripts": {
     "dev": "turbo run dev",
-    "electron": "yarn workspace @lere/electron",
-    "web": "yarn workspace @lere/web"
+    "electron": "pnpm --filter @lere/electron",
+    "web": "pnpm --filter @lere/electron"
   },
   "devDependencies": {
     "prettier": "^3.5.0",

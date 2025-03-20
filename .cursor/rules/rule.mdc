@@ -1,0 +1,14 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Your rule content
+
+- This is a TypeScript Electron application which extract legal roms from the user Steam, GOG and etc, libraries
+  - "/apps/electron" contains the host electron application, just a shell
+  - "/web" it is a vite/react application that builds to "dist" which is referenced by the electron app
+- The web app uses tailwind css, shadcn, vite + react 19 and pnpm
+- Ask and discuss before any significant change, unless told otherwise
+- Under "/python" there are many reference implementation
