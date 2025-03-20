@@ -25,13 +25,3 @@ dist-ssr
 python/__pycache__/
 
 .turbo
-.turbo/*
-
-.turbo/preferences
-.turbo/preferences/*
-
-.turbo/tmp
-.turbo/tmp/*
-
-.turbo/tmp/cache
-.turbo/tmp/cache/*
