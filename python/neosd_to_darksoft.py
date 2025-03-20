@@ -1,3 +1,4 @@
+# Split NeoSD roms (.neo) into Darksoft rom format (eprom, srom, m1rom, vroma0, vroma2, crom0)
 import sys
 import os
 from os import path
